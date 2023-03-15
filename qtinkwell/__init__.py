@@ -4,12 +4,14 @@ import os
 import sass
 import sys
 from os.path import dirname, normpath
+from string import Template
 from PySide6 import QtGui
 
 VERSION = '1.0.0'
 ROOT = dirname(__file__)
 DEFAULT_STYLESHEET = normpath(f'{ROOT}/inkwell.sass')
 DEFAULT_FONTDIR = normpath(f'{ROOT}/fonts')
+OUTLINE_STYLE = '\nQWidget { border:1px solid rgba(255,0,0,0.3) !important; }'
 
 
 # Custom logging formatter
@@ -29,12 +31,14 @@ log.addHandler(streamhandler)
 log.setLevel(logging.INFO)
 
 
-def applyStyleSheet(qobj, filepath=DEFAULT_STYLESHEET, outline=False):
+def applyStyleSheet(qobj, filepath=DEFAULT_STYLESHEET, context=None, outline=False):
     """ Apply the specified stylesheet via libsass and add it to qobj. """
-    styles = open(filepath).read()
+    context = {} if context is None else context
+    context.update({'dir':dirname(filepath).replace('\\','/')})
+    template = Template(open(filepath).read())
+    styles = template.safe_substitute(context)
     styles = sass.compile(string=styles)
-    if outline:
-        styles += 'QWidget { border:1px solid rgba(255,0,0,0.3) !important; }'
+    styles += OUTLINE_STYLE if outline else ''
     qobj.setStyleSheet(styles)
 
 
