@@ -1,9 +1,0 @@
-LICENSE
-README.md
-setup.py
-qtinkwell/__init__.py
-qtinkwell.egg-info/PKG-INFO
-qtinkwell.egg-info/SOURCES.txt
-qtinkwell.egg-info/dependency_links.txt
-qtinkwell.egg-info/requires.txt
-qtinkwell.egg-info/top_level.txt
