@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+# python .\setup.py sdist
+# twine upload --repository pypi dist/*
 from inkwell import VERSION
 from pkg_resources import parse_requirements
 from setuptools import setup
