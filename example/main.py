@@ -7,7 +7,7 @@ from PySide6.QtCore import Qt, QCoreApplication
 
 ROOT = dirname(dirname(__file__))
 sys.path.append(ROOT)
-import qtinkwell  # noqa
+import inkwell  # noqa
 
 QCoreApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
 QApplication.setStyle('default')
@@ -16,6 +16,6 @@ QApplication.setStyle('default')
 if __name__ == "__main__":
     app = QApplication()
     window = QUiLoader().load(normpath(f'{ROOT}/example/main.ui'))
-    qtinkwell.applyStyleSheet(window)
+    inkwell.applyStyleSheet(window)
     window.show()
     app.exec()

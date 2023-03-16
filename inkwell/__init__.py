@@ -7,7 +7,7 @@ from os.path import dirname, normpath
 from string import Template
 from PySide6 import QtGui
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 ROOT = dirname(__file__)
 DEFAULT_STYLESHEET = normpath(f'{ROOT}/inkwell.sass')
 DEFAULT_FONTDIR = normpath(f'{ROOT}/fonts')

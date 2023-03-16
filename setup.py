@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-from qtinkwell import VERSION
+from inkwell import VERSION
 from pkg_resources import parse_requirements
 from setuptools import setup
 
@@ -9,13 +9,13 @@ with open('requirements.txt') as handle:
     requirements = [str(req) for req in parse_requirements(handle)]
 
 setup(
-    name='qtinkwell',
+    name='inkwell',
     version=VERSION,
     description='A minimalistic dark theme for QT',
     author='Michael Shepanski',
     author_email='michael.shepanski@gmail.com',
-    url='https://github.com/pkkid/python-qtinkwell',
-    packages=['qtinkwell'],
+    url='https://github.com/pkkid/python-inkwell',
+    packages=['inkwell'],
     install_requires=requirements,
     python_requires='>=3.7',
     long_description=readme,
