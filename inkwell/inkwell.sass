@@ -39,16 +39,17 @@ QColorDialog {
 }
 
 QComboBox {
-  padding: 5px 5px;
   background-color: rgba(0,0,0,0);
   margin: 0px -1px;
+  padding: 5px 5px;
+  selection-background-color: rgba(0,0,0,0);
   QAbstractItemView {
-    padding: 0px;
     background-color: $secondary;
+    padding: 0px;
     &::item {
       background-color: $secondary;
-      border: 0px solid rgba(0,0,0,0);
       border-left: 2px solid $secondarydark;
+      border: 0px solid rgba(0,0,0,0);
       padding: 8px 3px;
       &:selected {
         background-color: $secondarylight;
@@ -69,18 +70,18 @@ QLineEdit {
 }
 
 QListWidget {
-  border: 0px solid rgba(0,0,0,0);
   background-color: $secondarydark;
   border-radius: 5px;
+  border: 0px solid rgba(0,0,0,0);
+  font-size: 13px;
   margin-top: 5px;
+  outline: 0;
   padding: 2px;
   selection-color: #ffffff;
-  font-size: 13px;
-  outline: 0;
   &::item {
     border-radius: 3px;
-    padding: 2px 5px;
     margin-bottom: 1px;
+    padding: 2px 5px;
     &:selected,
     &:hover {
       background-color: $secondarylight;
@@ -95,13 +96,13 @@ QListWidget {
 QMenu {
   background-color: #222222;
   &::item {
-    spacing: 3px;
-    padding: 8px 40px 8px 20px;
     background: transparent;
     border-radius: 5px;
+    padding: 8px 40px 8px 20px;
+    spacing: 3px;
     &:selected {
-      color: #ffffff;
       background-color: #181818;
+      color: #ffffff;
     }
   }
 }
@@ -121,8 +122,8 @@ QPushButton {
     padding: 0px;
   }
   &[class=colorbutton] {
-    min-width: 30px;
     max-width: 30px;
+    min-width: 30px;
   }
   &:hover {
     color: $primarytext;
@@ -131,37 +132,37 @@ QPushButton {
 
 QSlider {
   &::groove:horizontal {
-    height: 2px;
     background-color: $secondarydark;
+    height: 2px;
   }
   &::handle:horizontal {
     background-color: $secondarylight;
+    border-radius: 2px;
     border: 1px solid $secondarydark;
     height: 20px;
     margin: -6px 0;
     width: 20px;
-    border-radius: 2px;
   }
 }
 
 QSpinBox {
-  padding: 2px 5px 2px 5px;
   background-color: $secondary;
-  border-width: 0px;
   border-radius: 3px;
+  border-width: 0px;
+  padding: 2px 5px 2px 5px;
 }
 
 
 QScrollBar:vertical {
+  background: #222;
   border: 0px;
   margin: 0px 0px;
   width: 6px;
-  background: #222;
   &::handle:vertical {
     background: #444;
-    min-height: 0px;
-    max-height: 0px;
     border-radius: 3px;
+    max-height: 0px;
+    min-height: 0px;
   }
   // &::add-line:vertical,
   // &::sub-line:vertical,
@@ -173,34 +174,34 @@ QScrollBar:vertical {
 }
 
 QTableWidget {
-  font-size: 11px;
-  selection-background-color: $secondary;
   background-color: rgba($secondary, 0.2);
-  gridline-color: rgba(0,0,0,0);
   border-radius: 5px;
+  font-size: 11px;
+  gridline-color: rgba(0,0,0,0);
   outline: 0;
+  selection-background-color: $secondary;
   &::item {
-    padding: 0px 3px;
     border: 0px solid rgba(0,0,0,0);
     color: $secondarytext;
+    padding: 0px 3px;
     &:selected { color:$primarytext; }
   }
   QHeaderView {
     background-color: $secondary;
-    border: 0px solid rgba(0,0,0,0);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    border: 0px solid rgba(0,0,0,0);
     text-align: left;
     &::section {
-      border: 0px solid rgba(0,0,0,0);
       background-color: $secondary;
-      font-size: 11px;
-      border-right: 1px solid $secondarydark;
       border-bottom: 1px solid $secondarydark;
-      padding: 0px 5px;
+      border-right: 1px solid $secondarydark;
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
+      border: 0px solid rgba(0,0,0,0);
+      font-size: 11px;
       font-weight: normal;
+      padding: 0px 5px;
     }
   }
 }
@@ -209,8 +210,8 @@ QTableWidget {
 // Application Window
 //--------------------------
 QWidget[class=appwindow] {
-  border-radius: 4px;
   background-color: $secondarydark;
+  border-radius: 4px;
   border: 1px solid $secondary;
 }
 QWidget[class=titlebar] QLabel {
