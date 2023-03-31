@@ -95,15 +95,26 @@ QListWidget {
 
 QMenu {
   background-color: #222222;
+  margin: 4px;
   &::item {
-    background: transparent;
+    background-color: transparent;
     border-radius: 5px;
-    padding: 8px 40px 8px 20px;
+    padding: 8px 30px 8px 8px;
     spacing: 3px;
     &:selected {
       background-color: #181818;
       color: #ffffff;
     }
+  }
+  // Images from Material Design Icons
+  // https://pictogrammers.com/library/mdi/
+  // Advanced PNG Export: size:16px; color:#c5c0ba
+  &::indicator {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    &:non-exclusive:checked { image: url($dir/images/checked.png); }
+    &:non-exclusive:unchecked { image: url($dir/images/unchecked.png); }
   }
 }
 
